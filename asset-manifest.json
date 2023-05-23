@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AfiDashboard/static/css/main.bb6c8c44.css",
+    "main.js": "/AfiDashboard/static/js/main.3def7635.js",
+    "index.html": "/AfiDashboard/index.html",
+    "main.bb6c8c44.css.map": "/AfiDashboard/static/css/main.bb6c8c44.css.map",
+    "main.3def7635.js.map": "/AfiDashboard/static/js/main.3def7635.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb6c8c44.css",
+    "static/js/main.3def7635.js"
+  ]
+}
