@@ -1,5 +1,7 @@
 import React from "react";
 import TableCell from "@mui/material/TableCell";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 
 const Record = ({ record, deleteCallback, updateCallback }) => {
   const deleteClick = () => {
@@ -8,6 +10,7 @@ const Record = ({ record, deleteCallback, updateCallback }) => {
 
   const updateClick = () => {
     updateCallback(record);
+    
   };
 
   return (
@@ -22,10 +25,10 @@ const Record = ({ record, deleteCallback, updateCallback }) => {
       <TableCell>{record.room}</TableCell>
       <TableCell>
         {" "}
-        <button onClick={() => updateClick}>Update</button>
+        <button onClick={() => updateClick(record)}><EditIcon/></button>
       </TableCell>
       <TableCell>
-        <button onClick={() => deleteClick(record)}>delete</button>
+        <button onClick={() => deleteClick(record)}><DeleteForeverIcon/></button>
       </TableCell>
     </>
   );

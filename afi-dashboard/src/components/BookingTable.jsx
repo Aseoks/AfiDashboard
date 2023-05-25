@@ -15,23 +15,12 @@ import Paper from "@mui/material/Paper";
 import FormUpdate from "./FormUpdate";
 
 const BookingTable = () => {
-  const [record, setRecord] = useState({
-    room: "",
-    arrival: "",
-    departure: "",
-    name: "",
-    surname: "",
-    email: "",
-    guests: "",
-    pets: "",
-  });
   const [records, setRecords] = useState([]);
 
   const [recordToUpdate, setRecordToUpdate] = useState({});
 
   const [showUpdateForm, setShowUpdateForm] = useState(false);
 
-  const [query, setQuery] = useState("");
 
   useEffect(() => {
     ShowData();
@@ -45,23 +34,21 @@ const BookingTable = () => {
     // console.log(records);
   };
 
-  const handleInputChange = (e) => {
-    setRecord({ ...record, [e.target.name]: e.target.value });
-  };
+
 
   const deleteRecordFromFireStore = (record) => {
     deleteRecord(record);
     ShowData();
   };
 
-  //green button callback with record component
+
   const updateRecordFromFireStore = (record) => {
     setRecordToUpdate(record);
     setShowUpdateForm(true);
     // ShowData()
   };
 
-  //grey button from FireFormUpdate
+
   const updateRecordCallback = (record) => {
     record.date = new Date().toLocaleDateString();
     updateRecord(record);
@@ -71,7 +58,7 @@ const BookingTable = () => {
 
   return (
     <div>
-      <div className="m-5">
+      <div className="mx-16 p-3">
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -88,15 +75,26 @@ const BookingTable = () => {
                 <TableCell>Delete</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody>             
+              {showUpdateForm ? (
+                <FormUpdate
+                  updateRecord={updateRecordCallback}
+                  recordToUpdate={recordToUpdate}
+                ></FormUpdate>
+              ) : (
+                <></>
+              )}
               {records.map((record, index) => {
                 return (
                   <TableRow key={index}>
-                    <Record record={record} deleteCallback={ deleteRecordFromFireStore } updateCallback={ updateRecordFromFireStore}/>
+                    <Record
+                      record={record}
+                      deleteCallback={deleteRecordFromFireStore}
+                      updateCallback={updateRecordFromFireStore}
+                    />
                   </TableRow>
-                )
+                );
               })}
-              
             </TableBody>
           </Table>
         </TableContainer>

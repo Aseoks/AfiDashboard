@@ -27,7 +27,7 @@ const Navbar = () => {
   },[screenSize])
 
   return (
-    <div className='flex justify-between md:mx-6 p-2 relative'>
+    <div className='flex justify-between  md:mx-16 py-2 relative'>
       <IconButton 
         aria-label='close'
         onClick={() => setActiveMenu ((prevActiveMenu) => !prevActiveMenu)}

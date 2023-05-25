@@ -1,11 +1,10 @@
 import React from 'react'
-import { Header, BookingTable, FormUpdate } from '../components'
+import { Header, BookingTable } from '../components'
 
 const Bookings = () => {
   return (
     <div>
-      <Header title='Bookings'/>
-      <FormUpdate/>
+      <Header title='Bookings'/>     
       <BookingTable/>
     </div>
   )
