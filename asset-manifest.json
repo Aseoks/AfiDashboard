@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AfiDashboard/static/css/main.5a86a26c.css",
-    "main.js": "/AfiDashboard/static/js/main.931fe596.js",
+    "main.css": "/AfiDashboard/static/css/main.43055506.css",
+    "main.js": "/AfiDashboard/static/js/main.ebbab5eb.js",
     "index.html": "/AfiDashboard/index.html",
-    "main.5a86a26c.css.map": "/AfiDashboard/static/css/main.5a86a26c.css.map",
-    "main.931fe596.js.map": "/AfiDashboard/static/js/main.931fe596.js.map"
+    "main.43055506.css.map": "/AfiDashboard/static/css/main.43055506.css.map",
+    "main.ebbab5eb.js.map": "/AfiDashboard/static/js/main.ebbab5eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a86a26c.css",
-    "static/js/main.931fe596.js"
+    "static/css/main.43055506.css",
+    "static/js/main.ebbab5eb.js"
   ]
 }
